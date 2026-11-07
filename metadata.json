@@ -1,0 +1,8 @@
+{
+  "name": "Remix HypeAthe",
+  "description": "A premium, minimalist running tracker designed for athletic performance, seamless progress tracking, and professional-grade fitness insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

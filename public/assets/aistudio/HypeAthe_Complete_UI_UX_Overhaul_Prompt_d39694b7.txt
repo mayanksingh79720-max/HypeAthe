@@ -1,0 +1,409 @@
+HYPEATHE — COMPLETE UI/UX OVERHAUL & PROFESSIONAL ICON SYSTEM
+
+MASTER IMPLEMENTATION PROMPT
+
+You are working on my existing HypeAthe fitness tracking PWA.
+
+The current application has several visual and usability problems.
+Audit, redesign and fix them directly in the existing project.
+
+IMPORTANT: - Do not rebuild the application from scratch. - Do not
+replace working features with mockups. - Inspect the existing source
+code before making changes. - Fix actual implementation problems, not
+just their visual appearance. - Preserve all existing genuine user
+data. - Maintain compatibility with the existing architecture.
+
+The objective is to make HypeAthe look and feel like a professionally
+designed commercial fitness application.
+
+------------------------------------------------------------------------
+
+PART 1 — COMPLETE PROFESSIONAL DESIGN SYSTEM
+
+Establish one consistent design language across the entire application.
+
+Brand: HypeAthe Tagline: RUN YOUR PACE. TRACK YOUR PROGRESS.
+
+Visual direction: - Premium athletic technology. - Minimal and
+professional. - Modern fitness application. - Clean surfaces and strong
+typography. - Consistent spacing and proportions. - High-quality
+icons. - No unnecessary visual decorations.
+
+Color System
+
+Dark Theme: - Background: #101110 - Secondary: #181A18 - Surface:
+#202320 - Primary text: #FFFFFF - Secondary text: #A1A6A0 - Accent:
+#FF6B24
+
+Light Theme: - Background: #F7F7F5 - Secondary: #FFFFFF - Surface:
+#EEEEEA - Primary text: #171917 - Secondary text: #777D77 - Accent:
+#F36B2B
+
+Use consistent typography such as Inter.
+
+Avoid excessive font sizes, inconsistent font weights and unnecessary
+empty spaces.
+
+PART 2 — COMPLETE ICON SYSTEM REDESIGN
+
+The existing icons look generic, inconsistent and poorly designed.
+
+Redesign ALL icons throughout HypeAthe to look professional, modern and
+visually consistent.
+
+Use Lucide Icons as the primary icon library. Do not mix unrelated icon
+libraries.
+
+Do not use emojis, random Unicode symbols, broken SVGs or low-quality
+illustrations.
+
+A. Activity Icons
+
+Redesign the icons in the Select Activity Mode modal:
+
+1.  Running — recognizable professional running athlete icon.
+2.  Walking — clean walking or footprints icon.
+3.  Cycling — professional bicycle icon.
+4.  Biking — appropriate bicycle or commuter cycling icon.
+5.  Sprinting — dynamic sprint or speed-related icon.
+6.  Hiking — professional hiking or mountain icon.
+
+Use suitable existing Lucide icons where available.
+
+If an exact activity icon is unavailable, create a clean, consistent
+custom SVG icon. Do not use an unrelated icon just to fill the space.
+
+B. Activity Modal Redesign
+
+-   Consistent icon dimensions.
+-   Consistent stroke thickness.
+-   Proper optical alignment.
+-   Balanced icon-to-container proportions.
+-   Clean neutral backgrounds.
+-   Orange accent for active selections.
+-   Clearly visible selected state.
+-   Consistent spacing.
+-   No awkward oversized white icon boxes.
+-   No unnecessary decorative circles.
+-   No distorted icons.
+
+Selected activity: - Subtle orange-tinted surface. - Clearly visible
+icon. - Professional selection indicator.
+
+Unselected activities: - Neutral surface. - Consistent icon styling. -
+Proper contrast.
+
+Keep activity descriptions, pace/speed labels and useful information
+readable.
+
+C. Global Icon Audit
+
+Inspect and upgrade every icon across: - Welcome / Authentication. -
+Home Dashboard. - Explore. - Activity Selection. - Live Workout. - GPS
+Map Controls. - Activity Details. - History. - Analytics. - Stats
+Studio. - Community. - Challenges. - Notifications. - Profile. -
+Settings. - Bottom Navigation. - Map Layers. - Buttons and feature
+shortcuts.
+
+D. Icon Standards
+
+-   Normal interface icons: approximately 20–24px.
+-   Larger activity icons: appropriately sized.
+-   Consistent stroke weight around 1.8–2px where supported.
+-   Consistent alignment.
+-   Consistent container sizes.
+-   Orange accent for important active states.
+-   Neutral grey for inactive states.
+-   Theme-aware foreground colors.
+
+Never use decorative blue blobs or random colorful icon backgrounds.
+
+PART 3 — GOOGLE-ONLY AUTHENTICATION
+
+The current requirement is Google-only authentication.
+
+Remove the complete Email Authentication system.
+
+Keep ONLY: - Continue with Google. - Firebase Google Authentication. -
+Google account selection. - Session restoration. - Logout.
+
+Completely remove: - Continue with Email. - Email Login. - Email
+Signup. - Password fields. - Forgot Password. - Email verification
+screens. - Email authentication navigation.
+
+Welcome Screen
+
+Create a premium, clean and balanced Welcome screen.
+
+Include: - HypeAthe logo. - HypeAthe brand name. - RUN YOUR PACE. TRACK
+YOUR PROGRESS. - Short description. - Continue with Google button.
+
+Do not use oversized feature cards or excessive empty spaces.
+
+Firebase Authentication
+
+Use the existing Firebase project.
+
+Implement: - GoogleAuthProvider. - Appropriate popup or redirect
+authentication. - Firebase authentication state listener. - Firestore
+profile creation/retrieval. - Session persistence. - Logout. - Proper
+error handling.
+
+Routing: - New visitor → Splash → Welcome. - Logged-out visitor →
+Welcome. - Google authentication successful → Home. - Returning
+authenticated user → Splash → Home. - Logout → Welcome.
+
+Never show protected Home content before authentication is resolved.
+
+Do not implement fake authentication.
+
+PART 4 — SPLASH SCREEN
+
+Create a professional HypeAthe launch animation.
+
+Include: - HypeAthe logo. - Brand name. - Tagline. - Subtle orange
+loading indicator.
+
+Use: - Smooth fade-in and fade-out. - Minimal animation. - No excessive
+glow. - No arbitrary fixed delay.
+
+Wait until Firebase authentication state is resolved before routing.
+
+PART 5 — FIX HOME DASHBOARD
+
+The current Home Dashboard has inconsistent spacing, poor alignment and
+distorted icons.
+
+Redesign it with a professional layout.
+
+Header
+
+-   HypeAthe logo.
+-   Brand name.
+-   User profile avatar.
+-   Notifications.
+-   Settings access.
+
+Fix all overlapping and corrupted icons.
+
+Greeting
+
+Display: Good day, [User Name]!
+
+Below: RUN • TRACK • CONNECT
+
+Keep the greeting compact and balanced.
+
+Quick Access
+
+Create four consistent feature shortcuts: - Stats Studio. - Community. -
+Challenges. - Analytics.
+
+Use the redesigned professional icon system.
+
+Weekly Activity
+
+Display: - Genuine weekly distance. - Daily activity chart. - Date
+labels. - Real workout information.
+
+If no workouts exist: - Show 0.00 km. - Display a clean empty state. -
+Never insert dummy activity bars.
+
+Activity Summary
+
+Display genuine: - Total workouts. - Total duration. - Total distance.
+
+All values must come from the user’s actual saved workout records.
+
+Bottom Navigation
+
+Preserve: - Home. - Explore. - Record. - History. - Profile.
+
+Keep the central Record button prominent and professionally designed.
+
+PART 6 — STATS STUDIO REDESIGN AND FIX
+
+Use my supplied Stats poster reference as the design direction.
+
+I want a premium athletic workout statistics graphic.
+
+Exported Layout
+
+DISTANCE [Actual workout distance]
+
+PACE [Actual workout pace]
+
+TIME [Actual workout duration]
+
+[Actual Orange GPS Route Drawing]
+
+[HypeAthe Logo]
+
+Example values such as 14.00 km, 5:08/km and 1h 11m are illustrative
+references only. Never use them as actual workout data.
+
+Visual Requirements
+
+-   Large bold white statistics.
+-   Centered vertical layout.
+-   Professional typography.
+-   Orange GPS route drawing.
+-   HypeAthe logo at the bottom.
+-   Clean athletic poster style.
+-   No unnecessary decorations.
+-   No Strava logo or branding.
+
+Genuine Workout Data
+
+Generate posters using an actual completed workout.
+
+Use its: - Distance. - Pace. - Duration. - GPS route.
+
+Hide unavailable fields rather than inventing values.
+
+Transparent PNG Export
+
+CRITICAL: - The final exported PNG must have a genuinely transparent
+background. - Preserve the alpha channel. - No grey checkerboard in the
+exported image. - No black background. - No white background. - No card
+or background rectangle. - No gradients. - No unnecessary borders.
+
+Only the statistics, orange GPS route drawing and HypeAthe logo should
+appear.
+
+A checkerboard may be used in the editor preview only to indicate
+transparency.
+
+Implement preview, PNG export and native sharing where supported.
+
+PART 7 — REMOVE BLUE DOTS AND GRAPHICAL ARTIFACTS
+
+Inspect the supplied Home Dashboard screenshot.
+
+There are unwanted blue dotted/blob-like graphical elements around the
+header and icons.
+
+Identify and remove their actual source.
+
+Check for: - Unintended decorative blobs. - Broken icon assets. -
+Malformed SVGs. - Incorrect icon rendering. - Duplicate graphical
+elements. - Unwanted pseudo-elements. - Accidental CSS decorations.
+
+Remove these artifacts completely.
+
+Do not remove legitimate functional indicators or notifications.
+
+PART 8 — FIX EXCESSIVE SCROLLING
+
+The application currently requires too much scrolling, and some features
+become hidden or difficult to access.
+
+Audit every screen.
+
+Fix: - Excessive vertical spacing. - Oversized cards. - Unnecessary
+empty sections. - Nested scroll containers. - Incorrect fixed heights. -
+Content hidden behind bottom navigation. - Overflow and clipping. -
+Excessive padding and margins. - Duplicate sections. - Unnecessary tall
+modals.
+
+Home Screen Optimization
+
+Prioritize: 1. Header and profile. 2. Greeting. 3. Quick-access
+features. 4. Weekly distance. 5. Activity summary. 6. Recent workouts.
+
+Keep the most important information accessible without excessive
+scrolling.
+
+IMPORTANT: Do not solve scrolling by hiding features or disabling
+scrolling entirely. Use natural page scrolling where needed. Make every
+feature accessible.
+
+Ensure the bottom navigation never covers important content or buttons.
+
+PART 9 — REMOVE BAD SHADOWS AND LIGHTING EFFECTS
+
+The existing shadow and lighting effects make the interface look
+artificial.
+
+Remove: - Excessive box shadows. - Orange glow effects. - White glowing
+outlines. - Strong ambient lighting. - Unnecessary blur effects. - Heavy
+drop shadows. - Multiple layered shadows. - Decorative radial light
+effects. - Unnecessary gradient backgrounds.
+
+Use: - Clean flat surfaces. - Subtle borders where necessary. -
+Consistent surface colors. - Minimal elevation. - Proper contrast. -
+Clean separation between sections.
+
+Do not make the UI glossy or artificially illuminated.
+
+PART 10 — OTHER SCREEN CONSISTENCY
+
+Apply the same professional design system to: - Explore. - Live
+Workout. - Activity Details. - History. - Analytics. - Profile. -
+Community. - Challenges. - Settings. - Map Layers. - Stats Studio.
+
+Every screen must use consistent typography, spacing, icons, buttons and
+visual components.
+
+PART 11 — RESPONSIVE DESIGN
+
+Test viewport widths: - 360px. - 375px. - 390px. - 412px. - 430px.
+
+Also check tablet and desktop layouts.
+
+Fix: - Horizontal overflow. - Text clipping. - Overlapping icons. -
+Incorrect card dimensions. - Hidden buttons. - Broken bottom
+navigation. - Excessive vertical spacing. - Unbalanced layouts.
+
+PART 12 — FUNCTIONALITY PRESERVATION
+
+Do not break existing features: - Firebase Google Authentication. - User
+profiles. - Google Maps. - GPS tracking. - Workout recording. - Pause
+and resume. - Workout history. - Analytics calculations. - Cloud
+synchronization. - Social features. - Dark and light themes.
+
+Do not insert dummy workouts, fake statistics or placeholder users.
+
+Preserve genuine user data.
+
+Do not replace real functionality with static visual mockups.
+
+PART 13 — FINAL QUALITY ASSURANCE
+
+Before completing the task, verify:
+
+1.  Google-only authentication works.
+2.  All email authentication UI and routes are removed.
+3.  Splash screen works.
+4.  All activity icons are professionally redesigned.
+5.  Global icons are consistent.
+6.  Blue graphical artifacts are removed.
+7.  Home Dashboard is visually corrected.
+8.  Stats Studio matches the supplied reference.
+9.  Transparent PNG export preserves alpha.
+10. Excessive scrolling is fixed.
+11. All features remain accessible.
+12. Unwanted shadows and glow effects are removed.
+13. Dark and light themes work.
+14. Mobile responsiveness is verified.
+15. Existing GPS, map and workout functionality still works.
+
+Provide a factual implementation report: - What was changed. - What was
+tested. - What remains incomplete. - Any required manual configuration.
+
+Do not claim that something works unless it has actually been tested.
+
+FINAL DESIGN DIRECTION
+
+HypeAthe must look like a premium professional athletic application.
+
+I want: - Beautiful professional icons. - Clean activity selection. -
+Strong typography. - Balanced spacing. - Minimal shadows. - No
+artificial glow. - No random blue blobs. - No excessive scrolling. - A
+beautiful Stats Studio. - A clean Google-only Welcome screen.
+
+Prioritize visual quality, usability, consistency and real
+functionality.
+
+Inspect first, implement carefully, test everything and preserve the
+existing application.

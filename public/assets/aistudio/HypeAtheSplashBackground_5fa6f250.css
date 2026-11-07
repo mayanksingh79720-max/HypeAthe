@@ -1,0 +1,11 @@
+/* HypeAthe loading screen background */
+.hypeathe-splash {
+  min-height: 100svh;
+  width: 100%;
+  background-image:
+    linear-gradient(rgba(16,17,16,.12), rgba(16,17,16,.28)),
+    url("/images/hypeathe-loading-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

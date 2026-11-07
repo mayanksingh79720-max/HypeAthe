@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Authenticated user profile in HypeAthe",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "description": "User email address" },
+        "displayName": { "type": "string", "description": "Display name of the athlete" },
+        "photoURL": { "type": "string", "description": "Avatar photo URL" },
+        "createdAt": { "type": "string", "description": "ISO timestamp of account creation" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp of last update" },
+        "preferredUnits": { "type": "string", "enum": ["km", "mi"], "description": "Preferred distance units" },
+        "privacySettings": { "type": "object", "description": "User privacy controls" }
+      },
+      "required": ["uid", "email", "createdAt"]
+    },
+    "Activity": {
+      "title": "Activity",
+      "description": "Athletic workout recorded by the user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique workout activity ID" },
+        "userId": { "type": "string", "description": "Owner user UID" },
+        "activityType": { "type": "string", "description": "Type of activity (Running, Cycling, etc.)" },
+        "title": { "type": "string", "description": "Activity title" },
+        "distanceKm": { "type": "number", "description": "Distance covered in kilometers" },
+        "activeDuration": { "type": "number", "description": "Active duration in seconds" },
+        "durationFormatted": { "type": "string", "description": "Formatted duration mm:ss or hh:mm:ss" },
+        "pace": { "type": "string", "description": "Average pace" },
+        "calories": { "type": "number", "description": "Estimated calories burned" },
+        "date": { "type": "string", "description": "Date string" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" }
+      },
+      "required": ["id", "userId", "activityType", "distanceKm", "activeDuration"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Private user profile collection restricted to the authenticated user"
+    },
+    "/users/{userId}/activities/{activityId}": {
+      "schema": "Activity",
+      "description": "User workouts subcollection restricted to the authenticated owner"
+    }
+  }
+}
